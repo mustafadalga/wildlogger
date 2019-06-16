@@ -1,0 +1,6 @@
+WMI==1.4.9
+pywin32
+clipboard==0.0.4
+PyAutoGUI==0.9.44
+pynput==1.4
+requests==2.21.0
