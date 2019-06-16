@@ -19,7 +19,7 @@
 # website         :   https://apierson.com                                     #
 # linkedin        :   https://www.linkedin.com/in/mustafadalga                 #
 # github          :   https://github.com/mustafadalga                          #
-# email           :   mustafadalgaa<at>gmail[.]com                               #
+# email           :   mustafadalgaa<at>gmail[.]com                             #
 # usage           :   python wildlogger.py                                     #
 # python_version  :   3.7.2                                                    #
 # ==============================================================================
