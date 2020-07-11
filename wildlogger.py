@@ -240,7 +240,7 @@ class Wildlogger:
             report_timer.start()
         self.mail=MIMEMultipart()
 
-    def sendMail(self,from_email, parola,to_email, log=""):
+    def sendMail(self,from_email, password,to_email, log=""):
         try:
             if log!="":
                 self.mail.attach(MIMEText(log, "plain"))
@@ -253,7 +253,7 @@ class Wildlogger:
             server.ehlo()
             server.starttls()
             server.ehlo()
-            server.login(from_email, parola)
+            server.login(from_email, password)
             server.sendmail(from_email, to_email, self.mail.as_string())
             server.quit()
         except smtplib.SMTPException:
