@@ -16,7 +16,6 @@
 # date            :   06/16/2019                                               #
 # version         :   1.0                                                      #
 # author          :   Mustafa Dalga                                            #
-# website         :   https://apierson.com                                     #
 # linkedin        :   https://www.linkedin.com/in/mustafadalga                 #
 # github          :   https://github.com/mustafadalga                          #
 # email           :   mustafadalgaa<at>gmail[.]com                             #
