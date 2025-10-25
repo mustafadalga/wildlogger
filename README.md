@@ -11,10 +11,10 @@
 
 ```
 
-### Açıklama
-#### Çalıştırılan hedef sistemde ,hedefin bağlantı bilgilerini,cihaz sistem bilgilerini,işletim sistemi üzerinde çalışan processler ve  çalışmayan servislerin listesini,klavye tuş kayıtlarını , kopyalama -  yapıştırma panolarını  ve ekran görüntüleri yakalayıp belirtilen email adresine, belirtilen zaman aralıklarında gönderen,Windows işletim sistemi için tasarlanmış bir keylogger. 
+### Description
+ A keylogger designed for Windows operating system that captures connection information, device system information, a list of running processes and stopped services on the operating system, keyboard keystrokes, copy-paste clipboard content, and screenshots of the target system, sending them to a specified email address at specified time intervals.
 
-### Detay
+### Details
 
 <table>
  <tr>
@@ -22,9 +22,9 @@
    :arrow_right:
   </td>
   <td>
- Log kayıtları ve ekran görüntülerini rapor olarak göndermek için 2 farklı thread kullanılmaktadır; 
- <p>:heavy_check_mark:1.thread , Belirtilen mail adresine , belirtilen süre bazında log kayıtlarını gönderir.   </p>
- <p>:heavy_check_mark: 2.thread , Belirtilen süre de bir ekran görüntüleri  alır.Eğer alınan ekran görüntüsü sayısı 10 olursa , ekran görüntülerini belirtilen  mail adresine raporlar ve hedef bilgisayarda bir anormallik saptanmaması için silinir.</p>
+ 2 different threads are used to send log records and screenshots as reports; 
+ <p>:heavy_check_mark:1.thread sends log records to the specified email address based on the specified time interval.   </p>
+ <p>:heavy_check_mark: 2.thread takes screenshots at specified intervals. If the number of screenshots taken reaches 10, it reports the screenshots to the specified email address and deletes them to avoid detecting anomalies on the target computer.</p>
   </td>  
  </tr>
    <tr>
@@ -32,7 +32,7 @@
    :arrow_right:
   </td>
    <td>
-Raporlama işlemleri için varsayılan olarak google mail sunucusu kullanılmaktadır.  
+By default, Google Mail server is used for reporting operations.  
   </td>  
  </tr>
  <tr>
@@ -40,7 +40,7 @@ Raporlama işlemleri için varsayılan olarak google mail sunucusu kullanılmakt
    :arrow_right:
   </td>
  <td>
-  Eğer raporlama işlemi Gmail SMTP  sunucusu kullanılarak yapılacaksa <a href="https://www.google.com/settings/security/lesssecureapps" alt="Daha az güvenli uygulama erişimi">Daha az güvenli uygulama erişimi</a>  açık olmalıdır.
+  If reporting is to be done using Gmail SMTP server, <a href="https://www.google.com/settings/security/lesssecureapps" alt="Less secure app access">Less secure app access</a> must be enabled.
  </td>
  </tr>
   <tr>
@@ -48,7 +48,7 @@ Raporlama işlemleri için varsayılan olarak google mail sunucusu kullanılmakt
    :arrow_right:
   </td>
  <td>
-  Wildlogger'in hedef bilgisayarda sürekli çalışmasını sağlayan <strong>persistent</strong> metodu varsayılan olarak pasif hale getirilmiştir.
+  The <strong>persistent</strong> method, which ensures Wildlogger continuously runs on the target computer, is deactivated by default.
  </td>
  </tr>
  <tr>
@@ -56,21 +56,21 @@ Raporlama işlemleri için varsayılan olarak google mail sunucusu kullanılmakt
    :arrow_right:
   </td>
  <td>
-  Wildlogger, exe'ye dönüştürüldüğünde hedef bilgisayar üzerinde sürekli olarak çalışması için <strong>persistent</strong> metodunun aktif hale getirilmesi gerekir.<strong>Persistent</strong> metodu aktif edildikten sonra;  
-<p>:heavy_check_mark: Çalıştırılan Wildlogger dosyası appdata klasörüne "Windows Explorer" adı ile kopyalanır,  </p>
-<p>:heavy_check_mark: Kayıt defterinde,Windows'un başlangıçta çalışan uygulamalarının arasına  keylogger dosyasının  yolu eklenerek süreklilik sağlanır.</p>
+  When Wildlogger is converted to an exe, the <strong>persistent</strong> method must be activated for it to run continuously on the target computer. After the <strong>persistent</strong> method is activated;  
+<p>:heavy_check_mark: The executed Wildlogger file is copied to the appdata folder with the name "Windows Explorer",  </p>
+<p>:heavy_check_mark: In the registry, persistence is ensured by adding the keylogger file's path among the applications that run at Windows startup.</p>
  </td>
  </tr>
  </table>
 
 
-### Kullanım için kurulacak modüller
-* Windows için kurulum
+### Modules to install for usage
+* Windows installation
 ```
 python -m pip install -r .\requirements.txt
 ```
 
-### Kullanım
+### Usage
 ```
 python wildlogger.py 
 ```
